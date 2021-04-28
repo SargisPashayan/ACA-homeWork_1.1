@@ -1,6 +1,7 @@
-# homework1.1
+# homework1.2
 
-### commits
-* 8c245d2
-* 7aa545e
-* .......
+### tasks
+* Working with variables
+* Understanding different operator in JS
+* Swap 2 variables 
+* Swap 2 variables without using thir one
