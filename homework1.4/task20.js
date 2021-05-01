@@ -7,7 +7,7 @@
       let out = i;
       for (let j = 1; j <= i; j++) {
         c = out + n; 
-        output += c + ",";
+        output += c + " ";
         out = c;
         n = rows - j;  
       }
