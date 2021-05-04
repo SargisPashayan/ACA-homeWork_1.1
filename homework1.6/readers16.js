@@ -15,6 +15,6 @@ for (let i = 0; i < readers.length; i++) {
 }
 
 let updateReaders =  positiveStatusReaders.sort( function ( a, b ) { 
-    return (a.percent >= b.percent)?-1:1;
+    return (a.percent >= b.percent) ? - 1 : 1;
 } );
 console.log(updateReaders);
