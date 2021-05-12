@@ -23,7 +23,7 @@
 // advanced
 Array.prototype.myFilter = function (callback) {
   arr = [];
-  for (var i = 0; i < this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (callback(this[i], i, this)) {
         arr.push(this[i]);
     }
