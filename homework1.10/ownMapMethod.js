@@ -1,14 +1,14 @@
 const langs = ["JavaScript", "Python", "PHP", "Java", "C"];
 
-function myMap(arr, callback) {
+Array.prototype.myMap = function (callback) {
   const modArr = [];
-  for (let i in arr) {
-    modArr[i] = callback(arr[i]);
+  for (let i in this) {
+    modArr[i] = callback(this[i]);
   }
   return modArr;
 }
 
-const lengths = myMap(langs, function (item) {
+const lengths = langs.myMap(function (item) {
   return item.length;
 });
 
