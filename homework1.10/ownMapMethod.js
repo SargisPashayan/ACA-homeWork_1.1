@@ -1,17 +1,15 @@
-const str = ["JavaScript", "Python", "PHP", "Java", "C"];
+const langs = ["JavaScript", "Python", "PHP", "Java", "C"];
 
-function mapForEach(arr, callback) {
-
-    const modArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        modArr.push(callback(arr[i]));
-    }
-    return modArr;
+function myMap(arr, callback) {
+  const modArr = [];
+  for (let i in arr) {
+    modArr[i] = callback(arr[i]);
+  }
+  return modArr;
 }
 
-const lengths = mapForEach(str, function (item) {
-    return item.length;
+const lengths = myMap(langs, function (item) {
+  return item.length;
 });
 
 console.log(lengths);
-console.log(str);
