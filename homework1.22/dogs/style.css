@@ -1,4 +1,14 @@
-#randomImage{
-    width: 250px;
-    height: 250px;
+.breeds{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    background-color: #f5f7f9;
+}
+.breeds li{
+    padding: 10px;
+}
+.breeds li:hover{
+    padding: 10px;
+    background-color: #d5d7d9;
 }

@@ -1,19 +1,29 @@
-const randomImage = document.getElementById("randomImage");
+const breeds = document.querySelector(".breeds");
 
-function getRandomImage() {
-    const url = "https://dog.ceo/api/breeds/image/random";
+function getDogBreeds() {
+  const allBreedsApiUrl = "https://dog.ceo/api/breeds/list/all";
 
-    fetch(url)
-    .then(response => response.json())
-    .then(json => {
-        console.log(json);
-
-        let imageUrl = json.message;
-        randomImage.src = imageUrl;
+  fetch(allBreedsApiUrl)
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      parseJsonResponse(json);
     })
-    .catch(error => {
-        console.log(error)
-    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
-getRandomImage();
+function parseJsonResponse(json) {
+  let allBreedsData = json.message;
+  let breedsList = Object.keys(allBreedsData);
+
+  breeds.innerHTML = "";
+
+  breedsList.forEach(breed => {
+    let listItemHtml = `<li> ${breed} </li>`;
+    breeds.innerHTML += listItemHtml;
+  });
+}
+
+getDogBreeds();
