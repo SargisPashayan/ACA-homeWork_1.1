@@ -1,4 +1,4 @@
-const ul_breeds = document.getElementById("ul_breeds");
+const ul_breeds = document.querySelector("#ul_breeds");
 
 function getDogBreeds() {
   const allBreedsApiUrl = "https://dog.ceo/api/breeds/list/all";
@@ -28,7 +28,7 @@ function parseJsonResponse(json) {
 
 getDogBreeds();
 
-const img_container = document.getElementById("img_container");
+const img_container = document.querySelector("#img_container");
 
 function getDogImages(breedName) {
   const dogImagesUrl = `https://dog.ceo/api/breed/${breedName}/images`;
